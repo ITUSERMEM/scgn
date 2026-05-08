@@ -51,7 +51,7 @@ def demo_synthetic():
     aco_fft = torch.randn(N, fft_dim).numpy()
     train_idx = torch.arange(0, N // 2).numpy()
 
-    # Build explicit adjacency + FFT features (IMCGCN_RARGF style)
+    # Build explicit adjacency + FFT features
     adj_vib = build_knn_adj_normalized(vib_fft, train_idx, k=10)
     adj_aco = build_knn_adj_normalized(aco_fft, train_idx, k=10)
     fft_vib_feat = torch.tensor(vib_fft, dtype=torch.float32)
@@ -101,7 +101,7 @@ def demo_real(data_dir: str):
     aco_spec = torch.tensor(dataset.aco_specs, dtype=torch.float32, device=device)
     labels = torch.tensor(dataset.labels, dtype=torch.long, device=device)
 
-    # 4. Build FFT features & explicit adjacency (IMCGCN_RARGF style)
+    # 4. Build FFT features & explicit adjacency
     fft_vib = build_fft_features(dataset.vib_signals, norm="zscore")
     fft_aco = build_fft_features(dataset.aco_signals, norm="zscore")
     adj_vib = build_knn_adj_normalized(fft_vib, train_idx, k=10).to(device)

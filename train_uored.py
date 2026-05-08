@@ -142,7 +142,7 @@ def main():
     }
 
     # ------------------------------------------------------------------
-    # Build inductive KNN graph + z-score FFT features (IMCGCN_RARGF style)
+    # Build inductive KNN graph + z-score FFT features
     # ------------------------------------------------------------------
     print("[3/4] Building inductive KNN graph (k=10) ...")
     fft_vib = build_fft_features(dataset.vib_signals, norm="zscore")
