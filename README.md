@@ -36,6 +36,20 @@ pip install -r requirements.txt
 
 ---
 
+## Datasets
+
+The repository supports three public datasets used in the paper. Download links are provided below.
+
+| Dataset | Modality | Classes | Train / Val / Test | Source |
+|---|---|---|---|---|
+| **UORED-VAFCLS** | Vibration + Acoustic | 5 | 5% / 20% / 75% | [UORED-VAFCLS](https://www.researchgate.net/publication/376705789_UORED-VAFCLS_A_Benchmark_Dataset_for_Vibration_and_Acoustic_Fault_Diagnosis_of_Rolling_Element_Bearings) |
+| **HUST** | Vibration (Z-axis) + Acoustic | 6 | 20% / 20% / 60% | [HUST Motor](https://github.com/dongliangchang/Motor_Vibration_Dataset) |
+| **PU** | Vibration + Current | 9 | 20% / 20% / 60% | [Paderborn University Bearing](https://mb.uni-paderborn.de/en/kat/main-research/datacenter/bearing-datacenter/data-sets-and-download) |
+
+> **Note:** Place each dataset in its own directory and pass the path to the corresponding training script.
+
+---
+
 ## Quick Start
 
 ### 1. Synthetic smoke test (no dataset required)
@@ -50,13 +64,26 @@ python demo.py
 python demo.py /path/to/UORED-VAFCLS
 ```
 
-### 3. Full training on UORED
+### 3. Full training
 
+**UORED-VAFCLS**
 ```bash
 python train_uored.py /path/to/UORED-VAFCLS --seed 42 --epochs 50
 ```
 
-This script trains the SCGN model and prints test accuracy, precision, recall and macro-F1.
+**HUST Motor**
+```bash
+python train_hust.py /path/to/HUST --seed 42 --epochs 50
+```
+
+**PU Bearing**
+```bash
+python train_pu.py /path/to/PU --seed 42 --epochs 50
+```
+
+Each script trains the SCGN model and prints test accuracy, precision, recall and macro-F1.
+
+---
 
 ## API Reference
 
@@ -65,6 +92,8 @@ This script trains the SCGN model and prints test accuracy, precision, recall an
 | Symbol | Description |
 |--------|-------------|
 | `UOREDDataset(data_dir)` | UORED-VAFCLS dataset loader. Returns dicts with `vib_time`, `aco_time`, `vib_spec`, `aco_spec`, `label`. |
+| `HUSTDataset(data_dir)` | HUST motor dataset loader. |
+| `PUDataset(data_root)` | Paderborn University bearing dataset loader. |
 | `split_dataset(dataset, train_ratio, val_ratio, seed)` | Stratified random split. Returns `(train_idx, val_idx, test_idx)`. |
 | `build_fft_features(signals, norm="l2")` | Normalised FFT-magnitude features for graph construction. |
 
