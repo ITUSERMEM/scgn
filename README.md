@@ -1,9 +1,9 @@
-# SCGN — Spectral Coupling Graph Network
+# SCGN
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.0+](https://img.shields.io/badge/pytorch-2.0+-red.svg)](https://pytorch.org/)
 
-A graph-guided bimodal fault-diagnosis framework for rotating machinery. The core design is to **enhance single-modality representation quality before fusion** while keeping the decision stage structurally simple.
+A deep learning framework that fuses vibration and acoustic signals via graph convolutional networks for rotating machinery fault diagnosis. The core design is to **enhance single-modality representation quality before fusion** while keeping the decision stage structurally simple.
 
 **Three sequential stages**
 
