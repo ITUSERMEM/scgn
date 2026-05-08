@@ -58,41 +58,6 @@ python train_uored.py /path/to/UORED-VAFCLS --seed 42 --epochs 50
 
 This script trains the SCGN model and prints test accuracy, precision, recall and macro-F1.
 
-### 4. Minimal training snippet
-
-```python
-import torch
-from scgn import (
-    UOREDDataset, split_dataset,
-    build_fft_features, build_knn_adj_normalized, SCGN
-)
-
-# Load data
-dataset = UOREDDataset("/path/to/UORED-VAFCLS")
-train_idx, val_idx, test_idx = split_dataset(dataset, train_ratio=0.05, val_ratio=0.20)
-
-# Build explicit adjacency + FFT features
-fft_vib = build_fft_features(dataset.vib_signals, norm="zscore")
-fft_aco = build_fft_features(dataset.aco_signals, norm="zscore")
-adj_vib = build_knn_adj_normalized(fft_vib, train_idx, k=10)
-adj_aco = build_knn_adj_normalized(fft_aco, train_idx, k=10)
-fft_vib_feat = torch.tensor(fft_vib, dtype=torch.float32)
-fft_aco_feat = torch.tensor(fft_aco, dtype=torch.float32)
-
-# Model
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = SCGN(num_classes=5, d=64, gcn_layers=1, fft_dim=2048).to(device)
-
-# Training loop (illustrative)
-optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3)
-criterion = torch.nn.CrossEntropyLoss()
-
-model.train()
-# ... load tensors, forward, backward, step ...
-```
-
----
-
 ## API Reference
 
 ### `scgn.dataset`
