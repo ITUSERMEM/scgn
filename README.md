@@ -42,9 +42,9 @@ The repository supports three public datasets used in the paper. Download links 
 
 | Dataset | Modality | Classes | Train / Val / Test | Source |
 |---|---|---|---|---|
-| **UORED-VAFCLS** | Vibration + Acoustic | 5 | 5% / 20% / 75% | [UORED-VAFCLS](https://www.researchgate.net/publication/376705789_UORED-VAFCLS_A_Benchmark_Dataset_for_Vibration_and_Acoustic_Fault_Diagnosis_of_Rolling_Element_Bearings) |
-| **HUST** | Vibration (Z-axis) + Acoustic | 6 | 20% / 20% / 60% | [HUST Motor](https://github.com/dongliangchang/Motor_Vibration_Dataset) |
-| **PU** | Vibration + Current | 9 | 20% / 20% / 60% | [Paderborn University Bearing](https://mb.uni-paderborn.de/en/kat/main-research/datacenter/bearing-datacenter/data-sets-and-download) |
+| **UORED-VAFCLS** | Vibration + Acoustic | 5 | 5% / 20% / 75% | [Mendeley Data](https://data.mendeley.com/datasets/y2px5tg92h/5) |
+| **HUST** | Vibration (Z-axis) + Acoustic | 6 | 20% / 20% / 60% | [GitHub – HUSTmotor-multi-modal-dataset](https://github.com/CHAOZHAO-1/HUSTmotor-multi-modal-dataset) |
+| **PU** | Vibration + Current | 9 | 20% / 20% / 60% | [Paderborn KAt DataCenter](https://mb.uni-paderborn.de/kat/forschung/bearing-datacenter/data-sets-and-download) |
 
 > **Note:** Place each dataset in its own directory and pass the path to the corresponding training script.
 
