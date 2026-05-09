@@ -83,7 +83,7 @@ Each script trains the SCGN model and prints test accuracy, precision, recall an
 
 ## Reproducibility & Results
 
-All results below were obtained with a single run (`seed=42`) on an NVIDIA RTX 3090 / A100 GPU. The reported paper values are means ± standard deviations over 10 independent runs.
+All results below were obtained with a single run (`seed=42`) on an NVIDIA RTX 5090 GPU. The reported paper values are means ± standard deviations over 10 independent runs.
 
 ### UORED-VAFCLS
 
