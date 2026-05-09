@@ -98,9 +98,72 @@ python train_uored.py /path/to/UORED-VAFCLS --seed 42 --epochs 50
 | Metric | This run | Paper (Table 6) |
 |---|---|---|
 | Accuracy | **93.72%** | 93.59 ± 1.61% |
-| Precision | **93.81%** | — |
-| Recall | **93.72%** | — |
+| Precision | **93.71%** | — |
+| Recall | **93.99%** | — |
 | Macro-F1 | **93.67%** | 93.38 ± 1.57% |
+
+<details>
+<summary>Training log (click to expand)</summary>
+
+```
+Epoch 01/50  loss=1.6356  val_acc=40.24%  val_f1=24.01%
+Epoch 02/50  loss=1.3568  val_acc=73.81%  val_f1=74.32%
+Epoch 03/50  loss=1.1755  val_acc=77.86%  val_f1=78.35%
+Epoch 04/50  loss=1.0126  val_acc=75.24%  val_f1=74.77%
+Epoch 05/50  loss=0.8926  val_acc=77.14%  val_f1=77.63%
+Epoch 06/50  loss=0.8313  val_acc=79.76%  val_f1=80.44%
+Epoch 07/50  loss=0.7182  val_acc=82.62%  val_f1=82.87%
+Epoch 08/50  loss=0.6669  val_acc=80.71%  val_f1=81.13%
+Epoch 09/50  loss=0.6053  val_acc=79.76%  val_f1=80.35%
+Epoch 10/50  loss=0.5150  val_acc=81.90%  val_f1=82.15%
+Epoch 11/50  loss=0.5060  val_acc=84.05%  val_f1=83.93%
+Epoch 12/50  loss=0.4520  val_acc=83.81%  val_f1=83.78%
+Epoch 13/50  loss=0.4164  val_acc=83.10%  val_f1=83.23%
+Epoch 14/50  loss=0.3507  val_acc=82.62%  val_f1=82.95%
+Epoch 15/50  loss=0.2887  val_acc=85.24%  val_f1=85.72%
+Epoch 16/50  loss=0.2788  val_acc=86.90%  val_f1=87.21%
+Epoch 17/50  loss=0.2823  val_acc=87.62%  val_f1=87.88%
+Epoch 18/50  loss=0.2301  val_acc=88.33%  val_f1=88.51%
+Epoch 19/50  loss=0.2463  val_acc=89.05%  val_f1=89.12%
+Epoch 20/50  loss=0.2210  val_acc=90.00%  val_f1=89.93%
+Epoch 21/50  loss=0.1848  val_acc=90.24%  val_f1=90.08%
+Epoch 22/50  loss=0.1823  val_acc=91.43%  val_f1=91.05%
+Epoch 23/50  loss=0.1677  val_acc=91.67%  val_f1=91.24%
+Epoch 24/50  loss=0.1545  val_acc=91.43%  val_f1=91.05%
+Epoch 25/50  loss=0.1521  val_acc=91.19%  val_f1=90.85%
+Epoch 26/50  loss=0.1412  val_acc=91.19%  val_f1=90.85%
+Epoch 27/50  loss=0.1403  val_acc=92.14%  val_f1=91.86%
+Epoch 28/50  loss=0.1225  val_acc=92.62%  val_f1=92.47%
+Epoch 29/50  loss=0.1162  val_acc=92.62%  val_f1=92.47%
+Epoch 30/50  loss=0.1070  val_acc=92.62%  val_f1=92.68%
+Epoch 31/50  loss=0.0939  val_acc=92.86%  val_f1=92.98%
+Epoch 32/50  loss=0.1006  val_acc=92.38%  val_f1=92.59%
+Epoch 33/50  loss=0.1023  val_acc=91.90%  val_f1=92.21%
+Epoch 34/50  loss=0.0915  val_acc=91.90%  val_f1=92.21%
+Epoch 35/50  loss=0.1108  val_acc=91.90%  val_f1=92.21%
+Epoch 36/50  loss=0.0876  val_acc=92.14%  val_f1=92.40%
+Epoch 37/50  loss=0.0836  val_acc=92.14%  val_f1=92.40%
+Epoch 38/50  loss=0.0979  val_acc=92.86%  val_f1=92.98%
+Epoch 39/50  loss=0.0890  val_acc=92.86%  val_f1=92.98%
+Epoch 40/50  loss=0.0887  val_acc=92.86%  val_f1=92.98%
+Epoch 41/50  loss=0.0892  val_acc=93.10%  val_f1=93.18%
+Epoch 42/50  loss=0.0778  val_acc=93.33%  val_f1=93.38%
+Epoch 43/50  loss=0.0908  val_acc=93.33%  val_f1=93.38%
+Epoch 44/50  loss=0.0798  val_acc=93.33%  val_f1=93.38%
+Epoch 45/50  loss=0.0814  val_acc=93.33%  val_f1=93.38%
+Epoch 46/50  loss=0.0804  val_acc=93.57%  val_f1=93.57%
+Epoch 47/50  loss=0.0805  val_acc=93.57%  val_f1=93.57%
+Epoch 48/50  loss=0.0803  val_acc=93.57%  val_f1=93.57%
+Epoch 49/50  loss=0.0753  val_acc=93.57%  val_f1=93.57%
+Epoch 50/50  loss=0.0798  val_acc=93.57%  val_f1=93.57%
+
+Test Evaluation (Best Validation Checkpoint)
+Accuracy  : 93.72%
+Precision : 93.71%
+Recall    : 93.99%
+Macro-F1  : 93.67%
+```
+</details>
 
 ### HUST Motor
 

@@ -44,7 +44,7 @@ from scgn import (
     UOREDDataset,
     build_fft_features,
     build_knn_adj_normalized,
-    split_dataset,
+    split_uored_dataset,
 )
 
 
@@ -126,7 +126,7 @@ def main():
     # ------------------------------------------------------------------
     print("\n[1/4] Loading UORED-VAFCLS dataset ...")
     dataset = UOREDDataset(args.data_dir, seg_len=4096, overlap=0.0, max_segs_per_file=35)
-    train_idx, val_idx, test_idx = split_dataset(dataset, train_ratio=args.train_ratio, val_ratio=0.20, seed=args.seed)
+    train_idx, val_idx, test_idx = split_uored_dataset(dataset, train_ratio=args.train_ratio, val_ratio=0.20, seed=args.seed)
     print(f"Split -> train={len(train_idx)}, val={len(val_idx)}, test={len(test_idx)}")
 
     # ------------------------------------------------------------------
